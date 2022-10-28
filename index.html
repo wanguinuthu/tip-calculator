@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Tip Calculator</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>Splitz<span>Tip</span></h1>
+      </div>
+      <main>
+        <div class="bill-calc">
+          <div>
+            <label for="bill-input">Bill</label>
+            <span class="input-error"></span>
+            <input type="number" class="input bill" placeholder="0" id="bill" />
+          </div>
+          <div class="select-tip">
+            <label>Select Tip%</label>
+            <div class="option">
+              <select name="" id="select-options">
+                <option value="">25%-Top-Notch</option>
+                <option value="">20%-Excellent</option>
+                <option value="">15%-Good</option>
+                <option value="">10%-Bad</option>
+                <option value="">5%-Worst</option>
+                <input type="number" class="custom" placeholder="custom" />
+              </select>
+            </div>
+          </div>
+          <div class="tip-people">
+            <label>Number of People</label>
+            <span class="input-error"></span>
+            <input
+              type="number"
+              class="input people-amount"
+              id="people"
+              placeholder="0"
+            />
+          </div>
+        </div>
+
+        <div class="tip-result">
+          <div>
+            <div class="tip-amount">
+              <div class="tip-amount-person">
+                <p class="label-bill">Tip Amount</p>
+                <small class="person">/person</small>
+              </div>
+              <div>
+                <strong class="tip-amount">Ksh 0.00</strong>
+              </div>
+            </div>
+            <div class="tip-total">
+              <div>
+                <p class="label-bill">Total</p>
+                <small class="person">/person</small>
+              </div>
+              <div>
+                <strong class="tip-total">Ksh 0.00</strong>
+              </div>
+            </div>
+          </div>
+          <div class="reset">
+            <button id="reset">Reset</button>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

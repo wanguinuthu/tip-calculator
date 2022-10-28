@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,500;0,8..144,600;0,8..144,700;1,8..144,600&display=swap');
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto Serif', serif;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    gap: 2em;
+}
+main{
+    background-color:#FFCDB2;
+    display: flex;
+    padding: 1.5em;
+    width: 740px;
+    border-radius: 10px;
+    height: 360px;
+}
+.bill-calc{
+    width: 350px;
+    position: relative;
+}
+.input{
+    padding: 0 5px;
+    background-color: white;
+    text-align: end;
+    border-radius: 5px;
+    height: 35px;
+    width: 90%;
+    outline: none;
+    border: 1px solid white;
+    background-repeat: no-repeat;
+    background-position: 10px;
+    background-size: 10px;
+}
+.input:focus{
+    border: 1px solid #E5989B;
+}
+.bill{
+    background-image: url(./images/icon-dollar.svg);
+    margin-bottom: 2em;
+    font-size: 18px;
+    color: #6D6875;
+}
+.bill::placeholder{
+    font-size: 18px;
+    color: #6D6875;
+}
+.input-error{
+    font-size: 13px;
+    color: red;
+    position: absolute;
+    right: 3em;
+    top: 0;
+}
+label{
+    font-size: 13px;
+    color:#2B2D42 ;
+    margin-bottom: 5px;
+}
+.label-bill{
+    font-size: 13px;
+    color:#2B2D42 ;
+    margin-bottom: 5px;
+}
