@@ -1,5 +1,3 @@
-"use strict"
-
 const resetBtn= document.getElementById("reset");
 const inputPeople = document.getElementById("people");
 const inputBill = document.getElementById("bill");
@@ -8,8 +6,8 @@ const ten = document.querySelector(".ten");
 const fifteen = document.querySelector(".fifteen");
 const twenty = document.querySelector(".twenty");
 const twentyfive = document.querySelector(".twenty-five");
-const peopleError= document.querySelector(".people-error");
-const billError= document.querySelector(".bill-error");
+const peopleSpan= document.querySelector(".people-error");
+const billSpan= document.getElementById("bill-error");
 const tipAmount = document.querySelector(".tip-amount");
 const tipTotal = document.querySelector(".tip-total");
 const custom = document.querySelector(".custom");
@@ -70,22 +68,22 @@ function calculate(number, percent){
 
 function peopleError(){
     if(inputPeople.value <= 0){
-        peopleError.innerHTML="cannot be zero";
+        peopleSpan.innerHTML="cannot be zero";
         inputPeople.style.border= "1.5px solid red";
     }
     else{
-        peopleError.innerHTML="";
+        peopleSpan.innerHTML="";
         inputPeople.style.border= "1.5px solid green";
     }
 }
 
 function billError(){
     if(inputBill.value <= 0){
-        inputBill.innerHTML="cannot be zero";
+        billSpan.innerHTML="cannot be zero";
         inputBill.style.border= "1.5px solid red";
     }
     else{
-        inputBill.innerHTML="";
+        billSpan.innerHTML="";
         inputBill.style.border= "1.5px solid green";
     }
 }
@@ -95,8 +93,8 @@ resetBtn.addEventListener("click",()=>{
     inputBill.value = "";
     tipAmount.innerHTML= "Ksh 0.00";
     tipTotal.innerHTML="Ksh 0.00";
-    billError.innerHTML="";
-    peopleError.innerHTML="";
+    billSpan.innerHTML="";
+    peopleSpan.innerHTML="";
     inputPeople.style.border= "1.5px solid green";
     inputBill.style.border= "1.5px solid green";
 })
